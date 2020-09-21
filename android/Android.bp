@@ -15,6 +15,12 @@ sh_binary_host {
 //     + common_bindgen_flags + my_example_clang_flags,
 // }
 //
+// If your build system installs bindgen.sh and bindgen
+// in different locations, use the following cmd:
+//     cmd: "$(location bindgen.sh) --bindgen-path $(location bindgen)"
+//     + my_example_bindgen_flags
+//     + common_bindgen_flags + my_example_clang_flags,
+//
 // The 'out' file is a rust module to be included into other rust crates.
 //
 // common_bindgen_flags = " -o $(out) $(in) -- -MD -MF $(depfile)"
